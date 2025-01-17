@@ -111,12 +111,12 @@ const ChatUI = () => {
             Online
           </Typography>
         </Box>
-        <IconButton aria-label="voice call" color="primary">
+        {/* <IconButton aria-label="voice call" color="primary">
           <FiPhone />
         </IconButton>
         <IconButton aria-label="video call" color="primary">
           <FiVideo />
-        </IconButton>
+        </IconButton> */}
       </Header>
 
       <MessagesContainer>
