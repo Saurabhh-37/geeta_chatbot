@@ -10,12 +10,13 @@ import {
 } from "@mui/material";
 import { FiPhone, FiVideo, FiSend } from "react-icons/fi";
 import { generateResponse } from "../services/geminiAPI"; // Import the API service
+import KrishnaAvatar from "../assets/krishna-avatar.jpeg";
 
 const ChatContainer = styled(Box)(({ theme }) => ({
   height: "100vh",
   display: "flex",
   flexDirection: "column",
-  backgroundColor: "#f5f5f5",
+  backgroundColor: "#FBFBFB",
 }));
 
 const Header = styled(Box)({
@@ -41,7 +42,7 @@ const MessageBubble = styled(Paper)(({ isOwn }) => ({
   maxWidth: "70%",
   width: "fit-content",
   alignSelf: isOwn ? "flex-end" : "flex-start",
-  backgroundColor: isOwn ? "#1976d2" : "#ffffff",
+  backgroundColor: isOwn ? "#FF9D3D" : "#ffffff",
   color: isOwn ? "#ffffff" : "#000000",
   borderRadius: "1rem",
   position: "relative",
@@ -101,14 +102,17 @@ const ChatUI = () => {
     <ChatContainer>
       <Header>
         <Avatar
-          src="/assets/krishna-avatar.png"
-          alt="Krishna Avatar"
-          sx={{ width: 48, height: 48 }}
+          src="/assets/krishna-avatar.jpeg"
+          alt="Charioteer"
+          sx={{ 
+            width: 48,
+            height: 48,
+            backgroundColor: "#FF9D3D", // Orange background color 
+            }}
         />
         <Box sx={{ flex: 1 }}>
           <Typography variant="h6">Charioteer</Typography>
           <Typography variant="body2" color="text.secondary">
-            Online
           </Typography>
         </Box>
         {/* <IconButton aria-label="voice call" color="primary">
@@ -127,31 +131,55 @@ const ChatUI = () => {
         ))}
         {loading && (
           <Typography variant="body2" align="center" color="text.secondary">
-            Krishna is thinking...
+            Thinking...
           </Typography>
         )}
       </MessagesContainer>
 
       <InputContainer>
-        <TextField
-          fullWidth
-          variant="outlined"
-          placeholder="Ask Krishna..."
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-          onKeyPress={handleKeyPress}
-          size="small"
-          sx={{ "& .MuiOutlinedInput-root": { borderRadius: "2rem" } }}
-        />
+      <TextField
+  fullWidth
+  variant="outlined"
+  placeholder="Ask..."
+  value={message}
+  onChange={(e) => setMessage(e.target.value)}
+  onKeyPress={handleKeyPress}
+  size="small"
+  sx={{
+    "& .MuiOutlinedInput-root": {
+      borderRadius: "2rem",
+      "& fieldset": {
+        borderColor: "#D9DFC6", // Default border color
+      },
+      "&:hover fieldset": {
+        borderColor: "#FFBD73", // Border color on hover
+      },
+      "&.Mui-focused fieldset": {
+        borderColor: "#FF9D3D", // Border color when focused
+      },
+      "&.Mui-focused": {
+        boxShadow: "none", // Removes the default blue outline
+      },
+    },
+    "& .MuiInputBase-input": {
+      color: "#000000", // Text color
+    },
+    "& .MuiOutlinedInput-notchedOutline": {
+      borderColor: "#FF9D3D", // Border color
+    },
+  }}
+/>
+
+
         <IconButton
-          color="primary"
+          color="#FFBD73"
           onClick={handleSend}
           disabled={!message.trim()}
           aria-label="send message"
           sx={{
-            backgroundColor: "#1976d2",
+            backgroundColor: "#FFBD73",
             color: "#ffffff",
-            "&:hover": { backgroundColor: "#1565c0" },
+            "&:hover": { backgroundColor: "#FF9D3D" },
           }}
         >
           <FiSend />
