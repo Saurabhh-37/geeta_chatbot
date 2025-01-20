@@ -1,101 +1,71 @@
 import React from "react";
-import { Box, Typography, Button, Container, Grid, useTheme, useMediaQuery } from "@mui/material";
-import Carousel from "react-material-ui-carousel";
-import { useNavigate } from "react-router-dom";
+import { Button, Box, Typography, Container } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const LandingPage = () => {
-  const navigate = useNavigate();
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
-
-  const quotes = [
-    {
-      text: "You have the right to perform your duty, but not to the fruits of your actions.",
-      reference: "Bhagavad Gita, Chapter 2, Verse 47",
-    },
-    {
-      text: "A person is said to be elevated when they remain unaffected by joy or sorrow.",
-      reference: "Bhagavad Gita, Chapter 2, Verse 15",
-    },
-    {
-      text: "Set thy heart upon thy work, but never on its reward.",
-      reference: "Bhagavad Gita, Chapter 2, Verse 47",
-    },
-  ];
-
   return (
-    <Container maxWidth="lg" sx={{ textAlign: "center", py: 4 }}>
-      {/* Hero Section */}
-      <Box sx={{ mb: 6 }}>
+    <Container
+      maxWidth="md"
+      sx={{
+        height: "100vh",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
+        textAlign: "center",
+        padding: "2rem 1rem",
+      }}
+    >
+      <Box>
         <Typography
-          variant={isMobile ? "h4" : "h2"}
-          sx={{ fontFamily: "'Merriweather', serif", fontWeight: 700, color: "#FF9D3D" }}
+          variant="h2"
+          component="h1"
+          sx={{
+            fontWeight: "bold",
+            color: "#FF9D3D",
+            marginBottom: "1rem",
+          }}
         >
-          Seek Divine Guidance
+          Welcome to GeetAI
         </Typography>
         <Typography
-          variant={isMobile ? "body1" : "h6"}
-          sx={{ fontFamily: "'Roboto', sans-serif", color: "#5A5A5A", mt: 2 }}
+          variant="subtitle1"
+          sx={{
+            color: "#555",
+            fontSize: "1.2rem",
+            marginBottom: "2rem",
+          }}
         >
-          Discover timeless wisdom from the Bhagavad Gita to illuminate your path.
+          Experience the divine teachings of Lord Krishna with GeetAI. Ask
+          questions and receive wisdom from the Bhagavad Gita in your language.
         </Typography>
         <Button
           variant="contained"
-          onClick={() => navigate("/chat")}
           size="large"
-          sx={{ mt: 4, backgroundColor: "#FF9D3D", borderRadius: "2rem", px: 4, py: 1.5 }}
+          component={Link}
+          to="/chat"
+          sx={{
+            backgroundColor: "#FF9D3D",
+            color: "#FFF",
+            padding: "0.8rem 1.5rem",
+            fontSize: "1rem",
+            borderRadius: "1rem",
+            "&:hover": {
+              backgroundColor: "#FFBD73",
+            },
+          }}
         >
-          Begin Your Journey
+          Start Chatting
         </Button>
       </Box>
-
-      {/* Carousel Section */}
-      <Carousel
-        indicators={false}
-        navButtonsAlwaysVisible={true}
-        autoPlay={true}
-        interval={6000}
-        sx={{ mb: 6 }}
-      >
-        {quotes.map((quote, index) => (
-          <Box
-            key={index}
-            sx={{
-              backgroundColor: "#FFF6E0",
-              p: 4,
-              borderRadius: "1rem",
-              boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
-            }}
-          >
-            <Typography
-              variant={isMobile ? "body1" : "h5"}
-              sx={{ fontFamily: "'Merriweather', serif", fontWeight: 500, color: "#333" }}
-            >
-              "{quote.text}"
-            </Typography>
-            <Typography
-              variant="caption"
-              sx={{ fontFamily: "'Roboto', sans-serif", color: "#777", mt: 1, display: "block" }}
-            >
-              {quote.reference}
-            </Typography>
-          </Box>
-        ))}
-      </Carousel>
-
-      {/* Additional Section */}
       <Box>
         <Typography
-          variant={isMobile ? "h5" : "h4"}
-          sx={{ fontFamily: "'Merriweather', serif", fontWeight: 700, color: "#FF9D3D", mb: 2 }}
+          variant="body2"
+          sx={{
+            color: "#888",
+            fontSize: "0.9rem",
+          }}
         >
-          Embark on a Spiritual Journey
-        </Typography>
-        <Typography
-          variant="body1"
-          sx={{ fontFamily: "'Roboto', sans-serif", color: "#5A5A5A" }}
-        >
-          Ask your questions and receive enlightening answers rooted in the teachings of the Bhagavad Gita.
+          © 2025 GeetAI. All rights reserved.
         </Typography>
       </Box>
     </Container>
