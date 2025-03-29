@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="500" height="500" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="250" cy="250" r="240" fill="#FFF8F0" stroke="#FF9D3D" stroke-width="4"/>
+  
+  <!-- Decorative Elements -->
+  <path d="M250 50 C 300 50, 350 100, 350 150" stroke="#FFB74D" stroke-width="3" fill="none"/>
+  <path d="M250 450 C 300 450, 350 400, 350 350" stroke="#FFB74D" stroke-width="3" fill="none"/>
+  
+  <!-- Placeholder Text -->
+  <text x="250" y="250" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="24" fill="#FF9D3D">
+    Krishna Illustration
+  </text>
+  
+  <!-- Decorative Dots -->
+  <circle cx="100" cy="100" r="5" fill="#FF9D3D"/>
+  <circle cx="400" cy="100" r="5" fill="#FF9D3D"/>
+  <circle cx="100" cy="400" r="5" fill="#FF9D3D"/>
+  <circle cx="400" cy="400" r="5" fill="#FF9D3D"/>
+</svg> 
