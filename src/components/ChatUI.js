@@ -85,14 +85,13 @@ const MessagesContainer = styled(Box)(({ theme }) => ({
   bottom: 0,
   left: 0,
   right: 0,
-  padding: "2.2rem 0.5rem 1.2rem 0.5rem",
+  padding: "2.2rem 0.5rem 6.5rem 0.5rem", // Increased bottom padding for input bar
   overflowY: "auto",
   display: "flex",
   flexDirection: "column",
   gap: "1.2rem",
   zIndex: 5,
-  background: 'rgba(250, 246, 240, 0.82)', // warm, subtle gold/cream glassy background
-  border: `1.5px solid ${alpha(GOLD_SOFT, 0.7)}`,
+  background: `linear-gradient(120deg, #fffbe7 0%, #fff 60%, #B3E5FC 100%)`, // Apple-inspired SaaS gradient
   boxShadow: `0 4px 32px 0 ${alpha(GOLD_SOFT, 0.13)}`,
   borderRadius: 0,
   backdropFilter: 'blur(18px)',
