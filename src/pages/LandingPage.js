@@ -115,28 +115,6 @@ const LandingPage = () => {
               Conversational Gita Wisdom
             </Typography>
           </Box>
-          <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-            <MuiLink component="button" underline="none" sx={{ color: '#444', fontWeight: 500, fontSize: '1rem', px: 1 }} onClick={() => scrollToSection('features')}>Features</MuiLink>
-            <MuiLink component="button" underline="none" sx={{ color: '#444', fontWeight: 500, fontSize: '1rem', px: 1 }} onClick={() => scrollToSection('faq')}>FAQ</MuiLink>
-            <MuiLink href="#" underline="none" sx={{ color: '#444', fontWeight: 500, fontSize: '1rem', px: 1 }}>Pricing</MuiLink>
-            <Button
-              variant="outlined"
-              size="small"
-              href="#"
-              sx={{
-                borderRadius: 99,
-                borderColor: SAFFRON,
-                color: SAFFRON,
-                fontWeight: 700,
-                px: 3,
-                ml: 1,
-                textTransform: 'none',
-                '&:hover': { borderColor: GOLD, color: GOLD },
-              }}
-            >
-              Sign In
-            </Button>
-          </Box>
         </Toolbar>
       </AppBar>
 
@@ -328,12 +306,6 @@ const LandingPage = () => {
             <Typography variant="body2" sx={{ color: "#888", fontSize: "0.95rem" }}>
               © 2025 GeetAI. All rights reserved.
             </Typography>
-          </Box>
-          <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap', justifyContent: 'center' }}>
-            <MuiLink component="button" underline="none" sx={{ color: '#444', fontWeight: 500, fontSize: '1rem', px: 1 }} onClick={() => scrollToSection('features')}>Features</MuiLink>
-            <MuiLink component="button" underline="none" sx={{ color: '#444', fontWeight: 500, fontSize: '1rem', px: 1 }} onClick={() => scrollToSection('faq')}>FAQ</MuiLink>
-            <MuiLink href="#" underline="none" sx={{ color: '#444', fontWeight: 500, fontSize: '1rem', px: 1 }}>Pricing</MuiLink>
-            <MuiLink href="#" underline="none" sx={{ color: '#444', fontWeight: 500, fontSize: '1rem', px: 1 }}>Sign In</MuiLink>
           </Box>
           <Box sx={{ display: 'flex', gap: 1, justifyContent: 'center' }}>
             <IconButton href="https://twitter.com/" target="_blank" sx={{ color: '#888' }}><TwitterIcon /></IconButton>
