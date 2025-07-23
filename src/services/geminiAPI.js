@@ -2,7 +2,7 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 
 // Initialize the Gemini API client
 const genAI = new GoogleGenerativeAI(process.env.REACT_APP_GEMINI_KEY);
-console.log("API Key:", process.env.REACT_APP_GEMINI_KEY);
+// console.log("API Key:", process.env.REACT_APP_GEMINI_KEY);
 
 // Get the model instance with system instructions
 const model = genAI.getGenerativeModel({
