@@ -228,7 +228,7 @@ const BouncySendButton = styled(IconButton)(({ theme }) => ({
 const Loader = () => (
   <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, py: 1 }}>
     <CircularProgress size={20} sx={{ color: SAFFRON_DARK }} />
-    <Typography variant="body2" color="text.secondary">Shiva is thinking...</Typography>
+    <Typography variant="body2" color="text.secondary">Krishna is thinking...</Typography>
   </Box>
 );
 
